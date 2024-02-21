@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "form_backend": {
+      "main": "src/form_backend/main.mo",
+      "type": "motoko"
+    },
+    "form_frontend": {
+      "dependencies": [
+        "form_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/form_frontend/src/index.html"
+      },
+      "source": [
+        "src/form_frontend/assets",
+        "dist/form_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
